@@ -2,12 +2,20 @@ export default function CloseIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
-      width="24"
-      height="24"
-      fill="currentColor"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+      focusable="false"
+      role="img"
     >
-      <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm93.5 313.5c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 301.3l-48.2 48.2c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l48.2-48.2-48.2-48.2c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l48.2 48.2 48.2-48.2c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L301.3 256l48.2 48.2z" />
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
     </svg>
   );
 }

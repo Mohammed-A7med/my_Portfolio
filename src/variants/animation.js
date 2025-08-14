@@ -11,6 +11,7 @@ export const mobileListVariant = {
   hidden: {},
   visible: {
     transition: {
+      type: "tween",
       staggerChildren: 0.2,
     },
   },
