@@ -14,7 +14,7 @@ export default function SocialLinksGroup() {
         color="#0A66C2"
       />
       <SocialLink
-        link="github.com/Mohammed-A7med/"
+        link="https://github.com/Mohammed-A7med/"
         label="GitHub"
         icon={<GitHubIcon />}
         color="#5f93e7"
