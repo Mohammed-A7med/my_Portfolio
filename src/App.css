@@ -1,0 +1,17 @@
+.subtitle::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    transparent,
+    #5f93e7,
+    oklch(80.9% 0.105 251.813),
+    transparent
+  );
+  bottom: 0;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100px;
+}
