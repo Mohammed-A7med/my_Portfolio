@@ -1,4 +1,4 @@
-import personalImg from "../../assets/personal img.jpeg";
+import personalImg from "../../assets/personal img.png";
 import DownloadIcon from "../Ui-icons/DownloadIcon";
 import SocialLinksGroup from "./SocialLinksGroup";
 
