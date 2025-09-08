@@ -1,12 +1,10 @@
+import Section from "../Shared/Section";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-10">
-      <h2 className="text-center text-white text-xl md:text-3xl font-bold subtitle relative pb-4">
-        Projects
-      </h2>
-
+    <Section id="projects" title="Projects" >
+      
       <div className="cards grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-4 w-5/6 md:w-3/4 mx-auto">
         {/* ---------- Project Card ---------- */}
         <ProjectCard
@@ -28,6 +26,6 @@ export default function Projects() {
           listOfTech={["React", "TypeScript", "HTML", "Bootstrap"]}
         />
       </div>
-    </section>
+    </Section>
   );
 }
