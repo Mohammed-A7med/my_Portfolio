@@ -22,9 +22,9 @@ export default function ProjectCard({ link, title, description, listOfTech }) {
 
         <div className="links flex gap-3 my-4">
           <button>
-            <a
+            <a 
               href="#"
-              className="px-2 py-1 rounded-lg bg-white text-[#0582ca]  hover:bg-[#5f93e7] hover:text-white transition"
+              className="bg-white rounded-md px-1 py-0.5 text-[#0582ca] hover:bg-[#5f93e7] hover:text-white transition"
             >
               Live Demo
             </a>
@@ -33,7 +33,7 @@ export default function ProjectCard({ link, title, description, listOfTech }) {
           <button>
             <a
               href="#"
-              className="px-2 py-1 rounded-lg bg-transparent text-white border  transition"
+              className="bg-transparent rounded-md px-1 py-0.5 border border-white text-white  hover:bg-[#5f93e7] hover:border-[#5f93e7] transition"
             >
               GitHub
             </a>
