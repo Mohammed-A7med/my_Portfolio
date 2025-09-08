@@ -1,4 +1,4 @@
-import personalImg from "../../assets/personal img.jpeg";
+import personalImg from "../../assets/personal img.png";
 import DownloadIcon from "../Ui-icons/DownloadIcon";
 import SocialLinksGroup from "./SocialLinksGroup";
 
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="mt-8 flex gap-4 justify-center md:justify-start">
             <a
               className="flex items-center gap-2 bg-white rounded-full text-[#162d71] py-2 px-6 font-semibold hover:bg-[#5f93e7] hover:text-white transition"
-              href="/cv.pdf"
+              href="/Mohamed_Ahmed_Frontend_Developer_Resume.pdf"
               download="Mohamed_Ahmed_Frontend_Developer_Resume"
             >
               <DownloadIcon />
