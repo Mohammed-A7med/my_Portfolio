@@ -1,15 +1,36 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+
 import Input from "../Shared/Input";
+import emailjs from "@emailjs/browser";
+import SendIcon from "../Ui-icons/SendIcon";
 
 export default function ContactForm() {
+  const [statusMessage, setStatusMessage] = useState(null);
+
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
+    reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Form Data:", data);
+  const onSubmit = async (data) => {
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        data
+      );
+      setStatusMessage({ type: "success", text: "Message sent successfully!" });
+      reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatusMessage({
+        type: "error",
+        text: "Something went wrong. Please try again.",
+      });
+    }
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-4">
@@ -74,11 +95,30 @@ export default function ContactForm() {
       {/* Submit Button */}
       <button
         type="submit"
+        disabled={isSubmitting}
         className="px-4 py-2 rounded-md bg-[#5f93e7] hover:bg-blue-500 
            font-semibold transition duration-200"
       >
-        Send
+        {isSubmitting ? (
+          "Sending..."
+        ) : (
+          <>
+            <SendIcon />
+            Send Message
+          </>
+        )}
       </button>
+
+      {/* Status Message */}
+      {statusMessage && (
+        <p
+          className={`text-sm text-center px-1 ${
+            statusMessage.type === "success" ? "text-green-400" : "text-red-500"
+          }`}
+        >
+          {statusMessage.text}
+        </p>
+      )}
     </form>
   );
 }
