@@ -19,6 +19,7 @@ function App() {
       <Home />
       <Projects />
       <Contact />
+      <Footer/>
     </>
   );
 }
